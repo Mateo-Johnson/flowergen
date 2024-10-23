@@ -13,14 +13,15 @@
         @grid: 200x1 / 70vmin 100vmin;
         overflow: visible;
         contain: initial;
-        --colors: @p((#e9dbce, #fceade, #ea526f, #e2c290, #6b2d5c, #25ced1),
-          (#c9cba3, #ffe1a8, #e26d5c, #723d46, #472d30),
-          (#2B2B2B, #91B3E1, #2F5FB3, #3D4B89, #AE99E8, #DBE2EC),
-          (#114b5f, #1a936f, #88d498, #c6dabf, #f3e9d2),
-          (#e42268, #fb8075, #761871, #5b7d9c, #a38cb4, #476590),
-          (#223843, #e9dbce, #eff1f3, #dbd3d8, #d8b4a0, #d77a61),
-          (#e29578, #ffffff, #006d77, #83c5be, #ffddd2, #edf6f9),
-          (#ffbe0b, #fb5607, #ff006e, #8338ec, #3a86ff));
+        --colors: @p(
+          (#e9dbce, #fceade, #ea526f, #e2c290, #6b2d5c, #25ced1, #b3908c, #f7d5cb),
+          (#c9cba3, #ffe1a8, #e26d5c, #723d46, #472d30, #bcd29f, #ffd19d, #d46958),
+          (#2B2B2B, #91B3E1, #2F5FB3, #3D4B89, #AE99E8, #DBE2EC, #4c6378, #627d9c),
+          (#114b5f, #1a936f, #88d498, #c6dabf, #f3e9d2, #0e6770, #5fa48d, #b7c9b0),
+          (#e42268, #fb8075, #761871, #5b7d9c, #a38cb4, #476590, #ff9baa, #d782b2),
+          (#223843, #e9dbce, #eff1f3, #dbd3d8, #d8b4a0, #d77a61, #c7b1a5, #aca8a4),
+          (#e29578, #ffffff, #006d77, #83c5be, #ffddd2, #edf6f9, #a8d6d3, #d1e4e2),
+          (#ffbe0b, #fb5607, #ff006e, #8338ec, #3a86ff, #ff9f1c, #fa8072, #6a4c93));
         --color-1: black; 
         --color-2: @P;
         --color-3: @P;
@@ -180,12 +181,16 @@
   <script>
     let currentColorIndex = 0;
 
-    const pastelColors = [
-      '#ffb3ba', '#ffdfba', '#ffffba', '#baffc9', '#bae1ff',
-      '#ffc3a0', '#ff677d', '#d4a5a5', '#ffb3e0', '#c3b1e0',
-      '#c3ffe7', '#ffe3c4', '#b2f7ef', '#d1c4e9', '#ffcccb',
-      '#ffebee', '#d7ccc8', '#f8bbd0', '#f1f8e9', '#ffecb3'
-    ];
+  const pastelColors = [
+    '#ffb3ba', '#ffdfba', '#ffffba', '#baffc9', '#bae1ff',
+    '#ffc3a0', '#ff677d', '#d4a5a5', '#ffb3e0', '#c3b1e0',
+    '#c3ffe7', '#ffe3c4', '#b2f7ef', '#d1c4e9', '#ffcccb',
+    '#ffebee', '#d7ccc8', '#f8bbd0', '#f1f8e9', '#ffecb3',
+    '#e6e6fa', '#f9c6c9', '#ffcad4', '#e2b2c1', '#f2d1c9',
+    '#fbf8cc', '#f5e1da', '#c5d5e4', '#e4bad4', '#ffc6ff',
+    '#c5e3f6', '#def7e5', '#f9f7d9', '#fadadd', '#e0bb95',
+    '#f3d1f4', '#c2e9fb', '#f3e5f5', '#d7ffeb', '#fffee3'
+  ];
 
     function updateDoodleAndBackground() {
       const doodle = document.querySelector('css-doodle');
@@ -198,7 +203,7 @@
     function handleMouseMove() {
       updateDoodleAndBackground();
     }
-
+    
     document.addEventListener('mousemove', handleMouseMove);
   </script>
 </body>
